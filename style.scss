@@ -60,6 +60,74 @@ h1 {
     text-shadow: 2px 2px 2px rgba($color: #000000, $alpha: 0.2);
 }
 
+button {
+    background-color: $BabyBlueEyes;
+    border: 0px transparent none;
+    padding: 10px;
+    mix-blend-mode:color-burn;
+    box-shadow: 2px 2px 2px rgba($color: #000000, $alpha: 0.2);
+    font-family: mocha_frappuccino;
+    font-weight: bold;
+    text-align: left;
+
+    &:hover {
+        background-color: $PinkLavender;
+    }
+}
+
+.menu {
+    
+    margin-bottom: 10px;  
+
+    button {
+        margin-right: 10px;
+
+        &:last-child{
+            float: right;
+        }
+    }
+}
+
+.ToDoListPapa {
+
+    .expander {
+        
+        width: 100%;
+
+        &::after{
+            content: '\25EF';
+            float: right;
+            font-weight: bold;
+        }
+        
+        &.active {
+            background-color: $PinkLavender;
+        }
+
+        &.active {
+           
+            &::after {
+                content: '\2716';
+            }
+        }
+    }
+
+    .content {
+        visibility: collapse;
+        max-height: 0;
+        background-color: rgba($color: $BabyBlueEyes, $alpha: 0.5);
+        box-shadow: 2px 2px 2px $BabyBlueEyes;
+        mix-blend-mode:color-burn;
+        padding: 4px;
+        color: black;
+
+        &.active {
+            visibility: visible;
+            max-height: none;
+
+        }
+    }
+}
 @keyframes gradient {
     0% {
 		background-position: 0% 50%;

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: mocha_frappuccino;
   src: url(MochaFrappuccino-Bold.ttf);
@@ -48,6 +49,58 @@ h1 {
   color: #A2D2FF;
   mix-blend-mode: color-burn;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  background-color: #A2D2FF;
+  border: 0px transparent none;
+  padding: 10px;
+  mix-blend-mode: color-burn;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  font-family: mocha_frappuccino;
+  font-weight: bold;
+  text-align: left;
+}
+button:hover {
+  background-color: #CDB4DB;
+}
+
+.menu {
+  margin-bottom: 10px;
+}
+.menu button {
+  margin-right: 10px;
+}
+.menu button:last-child {
+  float: right;
+}
+
+.ToDoListPapa .expander {
+  width: 100%;
+}
+.ToDoListPapa .expander::after {
+  content: "◯";
+  float: right;
+  font-weight: bold;
+}
+.ToDoListPapa .expander.active {
+  background-color: #CDB4DB;
+}
+.ToDoListPapa .expander.active::after {
+  content: "✖";
+}
+.ToDoListPapa .content {
+  visibility: collapse;
+  max-height: 0;
+  background-color: rgba(162, 210, 255, 0.5);
+  box-shadow: 2px 2px 2px #A2D2FF;
+  mix-blend-mode: color-burn;
+  padding: 4px;
+  color: black;
+}
+.ToDoListPapa .content.active {
+  visibility: visible;
+  max-height: none;
 }
 
 @-webkit-keyframes gradient {

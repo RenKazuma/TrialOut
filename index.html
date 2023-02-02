@@ -5,9 +5,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <script type="text/javascript" src="script.js"></script>
+
     </head>
     <body>
         <div class="circleMama"></div>
         <h1>Bubbles</h1>
+        <div class="menu">
+            <button onclick="AddExpander()">Add Expander</button>
+            <button onclick="AddKeyPoint()">Add KeyPoint</button>
+            <button onclick="DeleteExpander()">Delete Expander</button>
+            <button onclick="DeleteKeyPoint()">Delete KeyPoint</button>
+            <button onclick="ClosePage()">Save</button>
+        </div>
+        <div class="ToDoListPapa">
+            <button class="expander" onclick="ExpanderToggle(this)">ToDoList</button>
+            <div class="content">
+                <ul>
+                    <li>hi</li>
+                </ul>
+            </div>
+        </div>
     </body>
 </html>
